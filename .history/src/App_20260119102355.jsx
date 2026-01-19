@@ -30,7 +30,7 @@ function App() {
             </div>
             <h3>
                 Hi! My name is Sophia. Welcome to my portfolio! Come back later
-                for some of my projects!
+                fo some of my projects!
             </h3>
         </>
     );
