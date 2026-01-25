@@ -1,12 +1,14 @@
-import { Header } from "./assets/components/navbar.jsx";
-import { Hero } from "./assets/components/hero.jsx";
-import { Projects, ProjectCard } from "./assets/components/projects.jsx";
-import { Footer } from "./assets/components/footer.jsx";
+import { Header } from "./assets/components/navbar/navbar.jsx";
+import { Hero } from "./assets/components/hero/hero.jsx";
+import { Projects, ProjectCard } from "./assets/components/projectcards/projects.jsx";
+import { Footer } from "./assets/components/footer/footer.jsx";
+import { InteractiveBackground } from "./assets/components/background/InteractiveBackground.jsx";
 import "./App.css";
 
 function App() {
   return (
     <>
+      <InteractiveBackground />
       <Header />
       <Hero />
       <Projects>

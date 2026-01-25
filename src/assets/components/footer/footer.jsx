@@ -6,12 +6,12 @@ export function Footer() {
       <div className="footer-content">
         <div className="footer-left">
           <div className="footer-contact">
-            <span className="icon">✉</span>
+            <img src="/email.svg?v=2" alt="Email" className="icon email-icon" />
             <a href="mailto:email@gmail.com">email@gmail.com</a>
           </div>
           <div className="footer-divider"></div>
           <div className="footer-contact">
-            <span className="icon">💼</span>
+            <img src="/LinkedIn.svg" alt="LinkedIn" className="icon linkedin-icon" />
             <a href="https://linkedin.com/sophiawan" target="_blank" rel="noopener noreferrer">
               linkedin.com/sophiawan
             </a>

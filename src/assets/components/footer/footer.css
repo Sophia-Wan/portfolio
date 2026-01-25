@@ -31,6 +31,18 @@
   font-size: 20px;
 }
 
+.footer-contact .email-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.footer-contact .linkedin-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 .footer-contact a {
   color: var(--color-text-dark);
   text-decoration: none;

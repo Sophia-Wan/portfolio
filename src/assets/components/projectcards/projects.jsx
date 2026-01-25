@@ -1,4 +1,5 @@
 import "./projects.css"
+import { SparkleButton } from "../button/sparklebutton.jsx"
 
 export function ProjectCard({ title, year, image }) {
   return (
@@ -10,7 +11,7 @@ export function ProjectCard({ title, year, image }) {
       <div className="project-info">
         <h3>{title}</h3>
         <p className="project-year">{year}</p>
-        <button className="view-btn">View Project</button>
+        <SparkleButton>View Project</SparkleButton>
       </div>
     </div>
   )
@@ -23,13 +24,7 @@ export function Projects({ children }) {
       <div className="projects-grid">
         {children}
       </div>
-      <div className="sparkles">
-        <span className="sparkle"></span>
-        <span className="sparkle"></span>
-        <span className="sparkle"></span>
-        <span className="sparkle"></span>
-        <span className="sparkle"></span>
-      </div>
+      
     </section>
   )
 }
