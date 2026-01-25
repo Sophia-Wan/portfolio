@@ -1,13 +1,16 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 60px;
   padding: 120px 40px 80px;
   min-height: 600px;
   color: var(--color-white);
   position: relative;
   overflow: hidden;
   background: linear-gradient(to bottom, var(--color-dark-bg) 0%, var(--color-dark-bg-2) 50%, var(--color-background-card) 100%);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .hero-video {
@@ -33,13 +36,11 @@
   right: 0;
   height: 100px;
   background-size: cover;
-  opacity: 100%;
   z-index: 1;
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 600px;
+  flex: 0 1 600px;
   z-index: 3;
   font-family: var(--font-primary);
   position: relative;
@@ -62,7 +63,7 @@
 }
 
 .hero-image {
-  flex: 1;
+  flex: 0 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
