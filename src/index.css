@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Variables */
+  --color-primary: #3d2040;
+  --color-secondary: #6c3f72;
+  --color-accent: #bda4c6;
+  --color-background-light: #f5ebef;
+  --color-background-card: #eacfdf;
+  --color-background-footer: #d3bdd3;
+  --color-background-image: #8a7c8d;
+  --color-text-dark: #3d2040;
+  --color-text-light: #8f659c;
+  --color-white: #ffffff;
+  --color-dark-bg: #3d2040;
+  --color-dark-bg-2: #6c3f72;
+  
+  /* Font Variables */
+  --font-primary: 'Fredoka', sans-serif;
+  --font-primary-bold: 'Fredoka', 600, sans-serif;
+  --font-secondary: 'Rubik', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,36 +28,11 @@
 }
 
 body {
-    overflow: hidden;
-    background-color: darkgray;
-}
-section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+    background-color: var(--color-background-light);
 }
 
-span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow:
-        0 0 0 4px rgba(255, 255, 255, 0.1),
-        0 0 0 8px rgba(255, 255, 255, 0.1),
-        0 0 20px rgba(255, 255, 255, 1);
-}
-span::before {
-    content: "";
-    position: absolute;
-    top: 300px;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 1px;
-    background: linear-gradient(90deg, #fff, transparent);
+html {
+    scroll-behavior: smooth;
 }

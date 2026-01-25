@@ -1,39 +1,25 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Header } from "./assets/components/navbar.jsx";
+import { Hero } from "./assets/components/hero.jsx";
+import { Projects, ProjectCard } from "./assets/components/projects.jsx";
+import { Footer } from "./assets/components/footer.jsx";
 import "./App.css";
 
 function App() {
-    const [count, setCount] = useState(0);
-
-    /* return (
-        <>
-            <div>
-                <div
-                    class='tenor-gif-embed'
-                    data-postid='13899535'
-                    data-share-method='host'
-                    data-aspect-ratio='1.77515'
-                    data-width='100%'>
-                    <a href='https://tenor.com/view/construct-construction-nail-and-hammer-build-worker-gif-13899535'>
-                        Construct Construction GIF
-                    </a>
-                    from{" "}
-                    <a href='https://tenor.com/search/construct-gifs'>
-                        Construct GIFs
-                    </a>
-                </div>{" "}
-                <script
-                    type='text/javascript'
-                    async
-                    src='https://tenor.com/embed.js'></script>
-            </div>
-            <h3>
-                Hi! My name is Sophia. Welcome to my portfolio! Come back later
-                for some of my projects!
-            </h3>
-        </>
-    ); */
+  return (
+    <>
+      <Header />
+      <Hero />
+      <Projects>
+        <ProjectCard title="Forge" year="2023" image="/Forge.svg" />
+        <ProjectCard title="Moolahmate" year="2024" image="/Moolahmate.svg" />
+        <ProjectCard title="Bandit Breakout" year="2024" image="/Bandit_breakout.svg" />
+        <ProjectCard title="PoPa" year="2024" image="/PoPa.svg" />
+        <ProjectCard title="Design Jam" year="2024" image="/Design Jam.svg" />
+        <ProjectCard title="GameCatalog" year="2024" image="/GameCatalog.svg" />
+      </Projects>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
