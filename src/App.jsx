@@ -12,10 +12,10 @@ function App() {
       <Projects>
         <ProjectCard title="Forge" year="2023" image="/Forge.svg" />
         <ProjectCard title="Moolahmate" year="2024" image="/Moolahmate.svg" />
-        <ProjectCard title="Bandit Breakout" year="2024" image="/Bandit_breakout.svg" />
+        <ProjectCard title="Bandit Breakout" year="2024" image="/Bandit_breakout.svg?v=2" />
         <ProjectCard title="PoPa" year="2024" image="/PoPa.svg" />
         <ProjectCard title="Design Jam" year="2024" image="/Design Jam.svg" />
-        <ProjectCard title="GameCatalog" year="2024" image="/GameCatalog.svg" />
+        <ProjectCard title="GameCatalog" year="2024" image="/GamesVault.svg" />
       </Projects>
       <Footer />
     </>
