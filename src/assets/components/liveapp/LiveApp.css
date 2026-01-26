@@ -1,0 +1,80 @@
+.live-app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.live-app-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.live-app-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.live-app-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  background: white;
+}
+
+.live-app-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.live-app-link a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.live-app-link a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.live-app-error {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.live-app-error p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .live-app-container {
+    padding: 0 0.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .live-app-title {
+    font-size: 1.25rem;
+  }
+
+  .live-app-wrapper {
+    border-radius: 8px;
+  }
+}
+

@@ -1,11 +1,13 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./assets/components/navbar/navbar.jsx";
 import { Hero } from "./assets/components/hero/hero.jsx";
 import { Projects, ProjectCard } from "./assets/components/projectcards/projects.jsx";
 import { Footer } from "./assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "./assets/components/background/InteractiveBackground.jsx";
+import { ForgePage } from "./pages/ForgePage.jsx";
 import "./App.css";
 
-function App() {
+function Home() {
   return (
     <>
       <InteractiveBackground />
@@ -21,6 +23,18 @@ function App() {
       </Projects>
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/forge" element={<ForgePage />} />
+        {/* Add routes for other project pages as needed */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,6 +1,6 @@
 import "./sparklebutton.css"
 
-export function SparkleButton({ children }) {
+export function SparkleButton({ children, onClick }) {
   const StarSVG = () => (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
@@ -27,7 +27,7 @@ export function SparkleButton({ children }) {
   )
 
   return (
-    <button className="sparkle-button">
+    <button className="sparkle-button" onClick={onClick}>
       <div className="star-1">
         <StarSVG />
       </div>
