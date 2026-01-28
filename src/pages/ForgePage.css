@@ -1,99 +1,87 @@
 .forge-page {
-  min-height: 100vh;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.back-button {
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  margin-bottom: 2rem;
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-project-bg);
 }
 
 .back-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateX(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-5px);
 }
 
 .forge-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .forge-content h1 {
-  font-size: 3rem;
-  color: white;
-  margin: 0;
-  text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin: 0;
+    text-align: center;
 }
 
 .forge-year {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
 }
 
 .forge-image-container {
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .forge-image {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .forge-description {
-  width: 100%;
-  max-width: 800px;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
 }
 
 .forge-description h2 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .forge-description p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
-  line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-  .forge-page {
-    padding: 1rem;
-  }
+    .forge-page {
+        padding: 1rem;
+    }
 
-  .forge-content h1 {
-    font-size: 2rem;
-  }
+    .forge-content h1 {
+        font-size: 2rem;
+    }
 
-  .forge-description {
-    padding: 1.5rem;
-  }
+    .forge-description {
+        padding: 1.5rem;
+    }
 
-  .forge-description h2 {
-    font-size: 1.5rem;
-  }
+    .forge-description h2 {
+        font-size: 1.5rem;
+    }
 }
-

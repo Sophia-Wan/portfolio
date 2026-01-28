@@ -1,34 +1,21 @@
 import { useState } from "react";
 import "./ProjectShowcase.css";
 
-/**
- * Reusable Project Showcase Component with Navigation
- * 
- * USAGE:
- * 
- * const projects = [
- *   {
- *     image: "/Forge.svg",
- *     number: "01",
- *     name: "Forge",
- *     link: "https://your-website.com"
- *   },
- *   {
- *     image: "/Moolahmate.svg",
- *     number: "02",
- *     name: "Moolahmate",
- *     link: "https://another-website.com"
- *   }
- * ];
- * 
- * <ProjectShowcase projects={projects} />
- * 
- * @param {Array} projects - Array of project objects with image, number, name, and link
- */
-export function ProjectShowcase({ projects = [] }) {
+
+
+export function ProjectShowcase({ projects, image, number, name, link }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  if (!projects || projects.length === 0) {
+  // If individual props are provided, create a single-item array
+  // Otherwise use the projects array
+  let projectsArray = [];
+  if (image || number || name || link) {
+    projectsArray = [{ image, number, name, link }];
+  } else if (projects && projects.length > 0) {
+    projectsArray = projects;
+  }
+
+  if (projectsArray.length === 0) {
     return (
       <div className="project-showcase-container">
         <p>No projects to display</p>
@@ -36,14 +23,19 @@ export function ProjectShowcase({ projects = [] }) {
     );
   }
 
-  const currentProject = projects[currentIndex];
+  const currentProject = projectsArray[currentIndex];
+  const hasMultipleProjects = projectsArray.length > 1;
 
   const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+    if (hasMultipleProjects) {
+      setCurrentIndex((prev) => (prev === 0 ? projectsArray.length - 1 : prev - 1));
+    }
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+    if (hasMultipleProjects) {
+      setCurrentIndex((prev) => (prev === projectsArray.length - 1 ? 0 : prev + 1));
+    }
   };
 
   return (
@@ -52,19 +44,20 @@ export function ProjectShowcase({ projects = [] }) {
         className="nav-arrow nav-arrow-left" 
         onClick={handlePrevious}
         aria-label="Previous project"
+        disabled={!hasMultipleProjects}
       >
         &lt;
       </button>
 
       <div className="project-showcase-content">
-        <div className="project-card-left">
+        
           <img 
             src={currentProject.image} 
             alt={currentProject.name} 
             className="project-showcase-image"
           />
-          <h3 className="project-showcase-name-left">{currentProject.name}</h3>
-        </div>
+          
+        
 
         <div className="project-details-right">
           <div className="project-number">{currentProject.number}</div>
@@ -84,6 +77,7 @@ export function ProjectShowcase({ projects = [] }) {
         className="nav-arrow nav-arrow-right" 
         onClick={handleNext}
         aria-label="Next project"
+        disabled={!hasMultipleProjects}
       >
         &gt;
       </button>

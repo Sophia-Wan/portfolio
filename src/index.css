@@ -1,24 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap");
 
 :root {
-  /* Color Variables */
-  --color-primary: #3d2040;
-  --color-secondary: #6c3f72;
-  --color-accent: #bda4c6;
-  --color-background-light: #f5ebef;
-  --color-background-card: #eacfdf;
-  --color-background-footer: #d3bdd3;
-  --color-background-image: #8a7c8d;
-  --color-text-dark: #3d2040;
-  --color-text-light: #8f659c;
-  --color-white: #ffffff;
-  --color-dark-bg: #3d2040;
-  --color-dark-bg-2: #6c3f72;
-  
-  /* Font Variables */
-  --font-primary: 'Fredoka', sans-serif;
-  --font-primary-bold: 'Fredoka', 600, sans-serif;
-  --font-secondary: 'Rubik', sans-serif;
+    /* Color Variables */
+    --color-primary: #3d2040;
+    --color-secondary: #6c3f72;
+    --color-accent: #bda4c6;
+    --color-background-light: #f5ebef;
+    --color-background-card: #eacfdf;
+    --color-background-footer: #d3bdd3;
+    --color-background-image: #8a7c8d;
+    --color-text-dark: #3d2040;
+    --color-text-light: #8f659c;
+    --color-white: #ffffff;
+    --color-dark-bg: #3d2040;
+    --color-dark-bg-2: #6c3f72;
+    --color-project-bg: linear-gradient(
+        to top,
+        rgba(61, 32, 64, 0.7) 0%,
+        rgba(108, 63, 114, 0.7) 50%,
+        rgba(234, 207, 223, 0.7) 100%
+    );
+
+    /* Font Variables */
+    --font-primary: "Fredoka", sans-serif;
+    --font-primary-bold: "Fredoka", 600, sans-serif;
+    --font-secondary: "Rubik", sans-serif;
 }
 
 * {
