@@ -24,19 +24,38 @@ export function ForgePage() {
                     />
 
                     <div className='forge-description'>
-                        <h2>About This Project</h2>
-                        <p>
-                            Add your project description here. This is where you
-                            can describe the Forge project, its purpose,
-                            technologies used, and key features.
-                        </p>
+                        <div className='forge-description-left'>
+                            <h2 className='forge-description-heading'>
+                                Overview
+                            </h2>
+                            <p className='forge-description-text'>
+                                Forge is a career pathway app designed to help
+                                high school students explore and discover trade
+                                careers through interactive career simulations.
+                                This team-based project focused on making trades
+                                job finding more engaging, personalized, and
+                                accessible for students who may not know where
+                                to start.
+                            </p>
+                        </div>
+                        <div className='forge-description-right'>
+                            <div className='forge-detail-block'>
+                                <h3 className='forge-detail-label'>Year</h3>
+                                <p className='forge-detail-value'>2025</p>
+                            </div>
+                            <div className='forge-detail-block'>
+                                <h3 className='forge-detail-label'>Team</h3>
+                                <p className='forge-detail-value'>8 members</p>
+                            </div>
+                            <div className='forge-detail-block'>
+                                <h3 className='forge-detail-label'>My Role</h3>
+                                <p className='forge-detail-value'>
+                                    UI/UX Designer, Illustrator, Front-end
+                                    Developer
+                                </p>
+                            </div>
+                        </div>
                     </div>
-
-                    <FigmaPrototype
-                        figmaUrl='https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/wjKad59FcjjUYrbksNSFto/Forge-App-MockUp?node-id=1725-3823&p=f&t=BqRgtKixIFvcBVNn-0&scaling=scale-down&content-scaling=fixed&page-id=1725%3A2428&starting-point-node-id=1725%3A3823&share=1'
-                        title='Forge Prototype'
-                        height='800px'
-                    />
                 </div>
             </div>
             <Footer />
