@@ -26,7 +26,7 @@ export function ScrollToTopButton() {
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >
-      ↑
+      <img src="/Arrows.svg" alt="Scroll to top" className="scroll-to-top-icon" />
     </button>
   );
 }
