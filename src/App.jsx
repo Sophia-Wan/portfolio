@@ -4,6 +4,7 @@ import { Hero } from "./assets/components/hero/hero.jsx";
 import { Projects, ProjectCard } from "./assets/components/projectcards/projects.jsx";
 import { Footer } from "./assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "./assets/components/background/InteractiveBackground.jsx";
+import { ScrollToTopButton } from "./assets/components/common/ScrollToTopButton.jsx";
 import { ForgePage } from "./pages/ForgePage.jsx";
 import "./App.css";
 
@@ -29,11 +30,14 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/forge" element={<ForgePage />} />
-        {/* Add routes for other project pages as needed */}
-      </Routes>
+      <>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/forge" element={<ForgePage />} />
+          {/* Add routes for other project pages as needed */}
+        </Routes>
+        <ScrollToTopButton />
+      </>
     </BrowserRouter>
   );
 }

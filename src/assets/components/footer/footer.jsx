@@ -7,7 +7,7 @@ export function Footer() {
         <div className="footer-left">
           <div className="footer-contact">
             <img src="/email.svg?v=2" alt="Email" className="icon email-icon" />
-            <a href="mailto:email@gmail.com">email@gmail.com</a>
+            <a href="wwan18@my.bcit.ca">wwan18@my.bcit.ca</a>
           </div>
           <div className="footer-divider"></div>
           <div className="footer-contact">

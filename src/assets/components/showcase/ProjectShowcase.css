@@ -3,10 +3,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    padding: 4rem 2rem;
+   
     min-height: 500px;
     position: relative;
-    /* Match navbar width (see `navbar.css` `.nav { max-width: 64rem; }`) */
+   
     max-width: 64rem;
     width: 100%;
     margin: 0 auto;
@@ -34,8 +34,9 @@
 
 .project-showcase-image {
     width: 400px;
-    height: 550px;
+    height: 450px;
     object-fit: contain;
+    
 }
 
 .project-details-right {
