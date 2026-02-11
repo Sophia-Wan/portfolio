@@ -1,0 +1,38 @@
+/* Design page styles */
+.design-page {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.design-projects {
+    padding: 4rem 0;
+    margin-top: 40px;
+}
+
+.design-projects h2 {
+    text-align: center;
+    font-family: var(--font-primary-bold);
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.design-projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.design-projects-grid .design-card {
+    flex: 1 1 calc((100% - 4rem) / 3);
+    max-width: calc((100% - 4rem) / 3);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .design-projects-grid .design-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

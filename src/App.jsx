@@ -9,6 +9,8 @@ import { Footer } from "./assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "./assets/components/background/InteractiveBackground.jsx";
 import { ScrollToTopButton } from "./assets/components/ScrollToTop/ScrollToTopButton.jsx";
 import { ForgePage } from "./pages/ForgePage.jsx";
+import { DesignsPage } from "./pages/Design.jsx";
+import { KaguyaPage } from "./pages/Kaguya.jsx";
 import "./App.css";
 
 function Home() {
@@ -67,7 +69,14 @@ function App() {
                         path='/forge'
                         element={<ForgePage />}
                     />
-                    {/* Add routes for other project pages as needed */}
+                    <Route
+                        path='/designs'
+                        element={<DesignsPage />}
+                    />
+                    <Route
+                        path='/kaguya'
+                        element={<KaguyaPage />}
+                    />
                 </Routes>
                 <ScrollToTopButton />
             </>

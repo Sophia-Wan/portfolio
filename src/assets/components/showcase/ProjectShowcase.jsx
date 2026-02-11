@@ -64,13 +64,16 @@ export function ProjectShowcase({ projects, image, number, name, link }) {
                     <h2 className='project-showcase-name-right'>
                         {currentProject.name}
                     </h2>
-                    <a
-                        href={currentProject.link}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='view-website-button'>
-                        View Website
-                    </a>
+                    {currentProject.link &&
+                        currentProject.link !== '#' && (
+                            <a
+                                href={currentProject.link}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                className='view-website-button'>
+                                View Website
+                            </a>
+                        )}
                 </div>
             </div>
 
