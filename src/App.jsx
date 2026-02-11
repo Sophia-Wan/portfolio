@@ -7,7 +7,7 @@ import {
 } from "./assets/components/projectcards/projects.jsx";
 import { Footer } from "./assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "./assets/components/background/InteractiveBackground.jsx";
-import { ScrollToTopButton } from "./assets/components/scrolltotop/ScrollToTopButton.jsx";
+import { ScrollToTopButton } from "./assets/components/ScrollToTop/ScrollToTopButton.jsx";
 import { ForgePage } from "./pages/ForgePage.jsx";
 import "./App.css";
 
