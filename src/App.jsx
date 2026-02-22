@@ -4,8 +4,13 @@ import { Hero } from "./assets/components/hero/hero.jsx";
 import { Projects, ProjectCard } from "./assets/components/projectcards/projects.jsx";
 import { Footer } from "./assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "./assets/components/background/InteractiveBackground.jsx";
-import { ScrollToTopButton } from "./assets/components/common/ScrollToTopButton.jsx";
+import { ScrollToTopButton } from "./assets/components/ScrollToTop/ScrollToTopButton.jsx";
 import { ForgePage } from "./pages/ForgePage.jsx";
+import { MoolahmatePage } from "./pages/MoolahmatePage.jsx";
+import { BanditBreakoutPage } from "./pages/BanditBreakoutPage.jsx";
+import { PoPaPage } from "./pages/PoPaPage.jsx";
+import { DesignJamPage } from "./pages/DesignJamPage.jsx";
+import { GameCatalogPage } from "./pages/GameCatalogPage.jsx";
 import "./App.css";
 
 function Home() {
@@ -34,7 +39,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/forge" element={<ForgePage />} />
-          {/* Add routes for other project pages as needed */}
+          <Route path="/moolahmate" element={<MoolahmatePage />} />
+          <Route path="/bandit-breakout" element={<BanditBreakoutPage />} />
+          <Route path="/popa" element={<PoPaPage />} />
+          <Route path="/design-jam" element={<DesignJamPage />} />
+          <Route path="/gamecatalog" element={<GameCatalogPage />} />
         </Routes>
         <ScrollToTopButton />
       </>

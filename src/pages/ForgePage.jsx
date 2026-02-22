@@ -81,7 +81,7 @@ export function ForgePage() {
 
                             <div className="forge-problem-personas">
                                 <div className="forge-problem-persona">
-                                    {/* Replace src with your first persona image */}
+                                
                                     <img
                                         src="/Persona1.png"
                                         alt="Forge persona 1"
@@ -89,7 +89,7 @@ export function ForgePage() {
                                     />
                                 </div>
                                 <div className="forge-problem-persona">
-                                    {/* Replace src with your second persona image */}
+                                    
                                     <img
                                         src="/Persona2.png"
                                         alt="Forge persona 2"
@@ -197,10 +197,15 @@ export function ForgePage() {
                                         paths.
                                     </p>
                                 </div>
-                                <div className="forge-section-media">
+                                <div className="forge-section-media forge-chatbox-media">
                                     <img
                                         src="/Anna.png"
                                         alt="Forge AI chatbox"
+                                        className="forge-chatbox-image"
+                                    />
+                                    <img
+                                        src="/Anna.png"
+                                        alt="Forge AI chatbox variant"
                                         className="forge-chatbox-image"
                                     />
                                 </div>
@@ -222,21 +227,12 @@ export function ForgePage() {
                                         badges that would support and align
                                         with each stage of the experience.
                                     </p>
-                                    <div className="forge-badge-icons">
-                                        
-                                        <img
-                                            src="/badges.png"
-                                            alt="Forge badges"
-                                            className="forge-badge-icon-image"
-                                        />
                                     </div>
-                                </div>
-                                <div className="forge-section-media">
-                                    
+                                <div className="forge-section-media forge-badge-media">
                                     <img
-                                        src="/user-journey.png"
-                                        alt="Badge user journey"
-                                        className="forge-badge-flow-image"
+                                        src="/badges.png"
+                                        alt="Forge badges"
+                                        className="forge-badge-icon-image"
                                     />
                                 </div>
                             </div>
