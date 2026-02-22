@@ -31,14 +31,14 @@ function Home() {
                     image='/Forge.svg'
                 />
                 <ProjectCard
-                    title='Moolahmate'
-                    year='2024'
-                    image='/Moolahmate.svg'
-                />
-                <ProjectCard
                     title='Bandit Breakout'
                     year='2024'
                     image='/Bandit_breakout.svg?v=2'
+                />
+                <ProjectCard
+                    title='Moolahmate'
+                    year='2024'
+                    image='/Moolahmate.svg'
                 />
                 <ProjectCard
                     title='PoPa'
