@@ -1,0 +1,64 @@
+.design-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #e8dfeb;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(61, 32, 64, 0.12);
+}
+
+.design-card-image-wrap {
+    flex: 1;
+    min-height: 200px;
+    background-color: #e8dfeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.design-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.design-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background-color: #e8dfeb;
+    gap: 0.5rem;
+}
+
+.design-card-title {
+    font-family: var(--font-primary-bold);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2d1f30;
+    margin: 0;
+}
+
+.design-card-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: opacity 0.2s ease;
+}
+
+.design-card-view:hover {
+    opacity: 0.7;
+}
+
+.design-card-arrow {
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+    display: block;
+}

@@ -177,6 +177,7 @@
 }
 
 .forge-badge-media {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,20 +210,18 @@
 
 .forge-onboarding-grid {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
     width: 100%;
 }
 
 .forge-onboarding-image {
-    flex: 1;
-    max-width: 160px;
-    width: 20%;
-    height: 50%;
-    aspect-ratio: 1 / 1; 
-    object-fit: cover;
+    width: 40%;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
     display: block;
-    margin-left: 5%;
+    margin: 0 auto;
 }
 
 .forge-trade-icons {
@@ -238,12 +237,10 @@
     width: 400px;
     height: 200px;
     object-fit: cover;
-    
-    
 }
 
 .forge-challenges-image {
-    width: 50%;
+    width: 40%;
     height: auto;
     object-fit: contain;
     display: block;
@@ -265,7 +262,6 @@
     display: block;
 }
 
-/* Hover effect only on images, not whole cards */
 .forge-illustration-image,
 .forge-ideation-image,
 .forge-chatbox-image,
@@ -275,7 +271,9 @@
 .forge-trade-icon-image,
 .forge-challenges-image,
 .forge-final-photo-image {
-    transition: transform 0.25s ease, box-shadow 0.25s ease,
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
         filter 0.25s ease;
 }
 
@@ -321,7 +319,6 @@
     flex: 1;
     border-radius: 12px;
     overflow: hidden;
-    
 }
 
 .forge-problem-persona-image {
