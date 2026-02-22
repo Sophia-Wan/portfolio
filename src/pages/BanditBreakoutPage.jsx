@@ -154,14 +154,14 @@ export function BanditBreakoutPage() {
                     <img src="Tile1.png" alt="" />
                   </div>
                   <div className="bb-mechanics-image-box">
-                    <img src="" alt="" />
+                    <img src="Tile2.png" alt="" />
                   </div>
                 </div>
               </div>
               <h3 className="bb-subheading">Bridge</h3>
               <div className="bb-bridge-row">
                 <div className="bb-bridge-image-wrap">
-                  <img src="/Bandit_breakout.svg" alt="Bridge" className="bb-bridge-image" />
+                  <img src="/Bridge.png" alt="Bridge" className="bb-bridge-image" />
                 </div>
                 <p className="bb-section-text bb-bridge-text">
                   The bridge was inspired by the game snakes and ladder, while looking
@@ -170,6 +170,94 @@ export function BanditBreakoutPage() {
                   since sometimes users don't always want a long game. Thus bridges
                   were created.
                 </p>
+              </div>
+
+              <h3 className="bb-subheading">Map Areas</h3>
+              <div className="bb-image-desc-list">
+                <div className="bb-image-desc-row">
+                  <div className="bb-image-desc-box">
+                    <img src="Desert.png" alt="Desert" />
+                  </div>
+                  <div className="bb-image-desc-content">
+                    <h4 className="bb-image-desc-heading">Desert</h4>
+                    <p className="bb-image-desc-text">The Desert is a place where users start off in the game. Sand storm and scorpions lurk around these areas. To make sure items can be obtained I created a event tile where when a user lands they have an option to choose an outcome, and based on what they choose they may obtain some loot or even lose some.</p>
+                  </div>
+                </div>
+                <div className="bb-image-desc-row">
+                  <div className="bb-image-desc-box">
+                    <img src="slums.png" alt="Slums" />
+                  </div>
+                  <div className="bb-image-desc-content">
+                    <h4 className="bb-image-desc-heading">Slums</h4>
+                    <p className="bb-image-desc-text">The slums was created to be a slight "Scary" place to prepare players before they enter crime city. while in slums yo encounter some scary people threating to take your items or even hurt you if you refuse.</p>
+                  </div>
+                </div>
+                <div className="bb-image-desc-row">
+                  <div className="bb-image-desc-box">
+                    <img src="slums.png" alt="Crime City" />
+                  </div>
+                  <div className="bb-image-desc-content">
+                    <h4 className="bb-image-desc-heading">Crime City</h4>
+                    <p className="bb-image-desc-text">Although no event tile happens in crime city, more battle spots were created to make sure players have a challenge when they enter the city. </p>
+                  </div>
+                </div>
+                <div className="bb-image-desc-row">
+                  <div className="bb-image-desc-box">
+                    <img src="oasis.png" alt="Oasis" />
+                  </div>
+                  <div className="bb-image-desc-content">
+                    <h4 className="bb-image-desc-heading">Oasis</h4>
+                    <p className="bb-image-desc-text">The Oasis was created to be a place where players can rest and recover their health and items after the battle in crime city. During the event tile players are able to rest up and  heal up to 5 health</p>
+                  </div>
+                </div>
+                <div className="bb-image-desc-row">
+                  <div className="bb-image-desc-box">
+                    <img src="casino.png" alt="Casino" />
+                  </div>
+                  <div className="bb-image-desc-content">
+                    <h4 className="bb-image-desc-heading">Casino</h4>
+                    <p className="bb-image-desc-text">In the casino there are more stops where players can land on slot machines and try their luck. If they win they may obtain some gold ranging from 20-50 gold. This has a chance to automatically send players to the end if they're smart enough with their money. There are 2 event tiles that can be found in the casino, where player question some NPCs sanity while others make a bet.</p>
+                  </div>
+                </div>
+                <div className="bb-image-desc-row">
+                  <div className="bb-image-desc-box">
+                    <img src="cave.png" alt="Mines" />
+                  </div>
+                  <div className="bb-image-desc-content">
+                    <h4 className="bb-image-desc-heading">Mines</h4>
+                    <p className="bb-image-desc-text">While players are at the mines they have a chance to land on a mining tile where they can earn 20 gold. There is no even tile in the mines but you sure do meet someone quite special while you trek from the oasis to the mines.</p>
+                  </div>
+                </div>
+                <div className="bb-image-desc-row">
+                  <div className="bb-image-desc-box">
+                    <img src="richManor.png" alt="Rich Manor" />
+                  </div>
+                  <div className="bb-image-desc-content">
+                    <h4 className="bb-image-desc-heading">Rich Manor</h4>
+                    <p className="bb-image-desc-text">While player enter the rich manor area they have a chance to meet the owner, lucky enough the owner might even drop some big cash for players to take. Not onyl do they get to meet the owner unexpectly, but they could even sneak into their house and loot around if they're bold enough.</p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="bb-subheading bb-icons-heading">Icons</h3>
+              <div className="bb-icons-row">
+                <div className="bb-icons-grid">
+                  <div className="bb-icons-image-box">
+                    <img src="Rules.svg" alt="rules icon" />
+                  </div>
+                  <div className="bb-icons-image-box">
+                    <img src="pause.svg" alt="pause icon" />
+                  </div>
+                  <div className="bb-icons-image-box">
+                    <img src="setting.svg" alt="settings icon" />
+                  </div>
+                  <div className="bb-icons-image-box">
+                    <img src="skip.svg" alt="skip icon" />
+                  </div>
+                </div>
+                <div className="bb-icons-text-box">
+                  <p className="bb-section-text">While creating the icons, I wanted to make sure they fit within our theme of cowboy hats and boots, like our title card By using the brown color to try and replacate wood like elements.</p>
+                </div>
               </div>
             </div>
           </div>
