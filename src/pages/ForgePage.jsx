@@ -200,7 +200,7 @@ export function ForgePage() {
                                 </div>
                                 <div className='forge-section-media forge-chatbox-media'>
                                     <img
-                                        src='/Anna.png'
+                                        src='/annamd.png'
                                         alt='Forge AI chatbox'
                                         className='forge-chatbox-image'
                                     />
