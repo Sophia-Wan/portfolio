@@ -108,6 +108,39 @@ export function KaguyaPage() {
                         ))}
                     </div>
                 </div>
+
+                <section className="kaguya-models" aria-label="3D can models">
+                    <h2 className="kaguya-models-heading">3D Models</h2>
+                    <div className="kaguya-models-grid">
+                        <div className="kaguya-model-wrap">
+                            <model-viewer
+                                src="/can1.glb"
+                                alt="Kaguya can 1"
+                                camera-controls
+                                auto-rotate
+                                className="kaguya-model-viewer"
+                            />
+                        </div>
+                        <div className="kaguya-model-wrap">
+                            <model-viewer
+                                src="/can2.glb"
+                                alt="Kaguya can 2"
+                                camera-controls
+                                auto-rotate
+                                className="kaguya-model-viewer"
+                            />
+                        </div>
+                        <div className="kaguya-model-wrap">
+                            <model-viewer
+                                src="/can3.glb"
+                                alt="Kaguya can 3"
+                                camera-controls
+                                auto-rotate
+                                className="kaguya-model-viewer"
+                            />
+                        </div>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>

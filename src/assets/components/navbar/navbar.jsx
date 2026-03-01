@@ -13,9 +13,6 @@ export function Header() {
         </Link>
         
         <div className="nav-links">
-          <a href="/#resume" className="nav-link">
-            Resume
-          </a>
           <Link to="/designs" className="nav-link">
             Designs
           </Link>
