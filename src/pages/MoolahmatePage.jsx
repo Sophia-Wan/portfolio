@@ -9,21 +9,38 @@ export function MoolahmatePage() {
     <>
       <InteractiveBackground />
       <Header />
-      <div className="moolahmate-page">
-        <div className="moolahmate-content">
-          <ProjectShowcase
-            image="/Moolahmate.svg"
-            number="03"
-            name="Moolahmate"
-            link="#"
-          />
-          <div className="project-placeholder-box">
-            <p className="project-placeholder-text">
-              Currently under construction. Thank you for your patience.
+      <main className="moolahmate-page">
+        <ProjectShowcase
+          image="/Moolahmate.svg"
+          number="03"
+          name="Moolahmate"
+          link="#"
+        />
+
+        <div className="moolahmate-description">
+          <div className="moolahmate-description-left">
+            <h2 className="moolahmate-description-heading">Overview</h2>
+            <p className="moolahmate-description-text">
+              About Moolahmate
             </p>
           </div>
+          <div className="moolahmate-description-right">
+            <h2 className="moolahmate-description-heading">Year</h2>
+            <p className="moolahmate-description-text">2025</p>
+            <h2 className="moolahmate-description-heading">Team</h2>
+            <p className="moolahmate-description-text">4 members</p>
+            <h2 className="moolahmate-description-heading">My role</h2>
+            <p className="moolahmate-description-text">UI/UX Designer, Project Lead, Front-end Developer</p>
+          </div>
         </div>
-      </div>
+
+        <div className="moolahmate-design-desc">
+          <h2 className="moolahmate-design-desc-heading">Design</h2>
+          <p className="moolahmate-design-desc-text">
+           Desc....
+          </p>
+        </div>
+      </main>
       <Footer />
     </>
   );

@@ -9,21 +9,38 @@ export function PoPaPage() {
     <>
       <InteractiveBackground />
       <Header />
-      <div className="popa-page">
-        <div className="popa-content">
-          <ProjectShowcase
-            image="/PoPa.svg"
-            number="04"
-            name="PoPa"
-            link="#"
-          />
-          <div className="project-placeholder-box">
-            <p className="project-placeholder-text">
-              Currently under construction. Thank you for your patience.
+      <main className="popa-page">
+        <ProjectShowcase
+          image="/PoPa.svg"
+          number="04"
+          name="PoPa"
+          link="#"
+        />
+
+        <div className="popa-description">
+          <div className="popa-description-left">
+            <h2 className="popa-description-heading">Overview</h2>
+            <p className="popa-description-text">
+              About PoPa
             </p>
           </div>
+          <div className="popa-description-right">
+            <h2 className="popa-description-heading">Year</h2>
+            <p className="popa-description-text">2025</p>
+            <h2 className="popa-description-heading">Team</h2>
+            <p className="popa-description-text">2 Members</p>
+            <h2 className="popa-description-heading">My role</h2>
+            <p className="popa-description-text">Designer, Illustrator, Prototyper</p>
+          </div>
         </div>
-      </div>
+
+        <div className="popa-design-desc">
+          <h2 className="popa-design-desc-heading">Design</h2>
+          <p className="popa-design-desc-text">
+            Desc....
+          </p>
+        </div>
+      </main>
       <Footer />
     </>
   );

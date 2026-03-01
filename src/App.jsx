@@ -16,6 +16,10 @@ import { DesignJamPage } from "./pages/DesignJamPage.jsx";
 import { GameCatalogPage } from "./pages/GameCatalogPage.jsx";
 import { DesignsPage } from "./pages/Design.jsx";
 import { KaguyaPage } from "./pages/Kaguya.jsx";
+import { MenuPage } from "./pages/MenuPage.jsx";
+import { MagazinePage } from "./pages/MagazinePage.jsx";
+import { PosterPage } from "./pages/PosterPage.jsx";
+import { WingnutorooPage } from "./pages/WingnutorooPage.jsx";
 import "./App.css";
 
 function Home() {
@@ -75,6 +79,10 @@ function App() {
                     <Route path="/gamecatalog" element={<GameCatalogPage />} />
                     <Route path="/designs" element={<DesignsPage />} />
                     <Route path="/kaguya" element={<KaguyaPage />} />
+                    <Route path="/menu" element={<MenuPage />} />
+                    <Route path="/magazine" element={<MagazinePage />} />
+                    <Route path="/poster" element={<PosterPage />} />
+                    <Route path="/wingnutoroo" element={<WingnutorooPage />} />
                 </Routes>
                 <ScrollToTopButton />
             </>

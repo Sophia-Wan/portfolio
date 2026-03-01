@@ -9,21 +9,39 @@ export function GameCatalogPage() {
     <>
       <InteractiveBackground />
       <Header />
-      <div className="gamecatalog-page">
-        <div className="gamecatalog-content">
-          <ProjectShowcase
-            image="/GamesVault.svg"
-            number="06"
-            name="GameCatalog"
-            link="#"
-          />
-          <div className="project-placeholder-box">
-            <p className="project-placeholder-text">
-              Currently under construction. Thank you for your patience.
+      <main className="gamecatalog-page">
+        <ProjectShowcase
+          image="/GamesVault.svg"
+          number="06"
+          name="GameCatalog"
+          link="#"
+        />
+
+        <div className="gamecatalog-description">
+          <div className="gamecatalog-description-left">
+            <h2 className="gamecatalog-description-heading">Overview</h2>
+            <p className="gamecatalog-description-text">
+              About GameCatalog
+            
             </p>
           </div>
+          <div className="gamecatalog-description-right">
+            <h2 className="gamecatalog-description-heading">Year</h2>
+            <p className="gamecatalog-description-text">2025</p>
+            <h2 className="gamecatalog-description-heading">Team</h2>
+            <p className="gamecatalog-description-text">4 members</p>
+            <h2 className="gamecatalog-description-heading">My role</h2>
+            <p className="gamecatalog-description-text">Designer</p>
+          </div>
         </div>
-      </div>
+
+        <div className="gamecatalog-design-desc">
+          <h2 className="gamecatalog-design-desc-heading">Design</h2>
+          <p className="gamecatalog-design-desc-text">
+           Desc....
+          </p>
+        </div>
+      </main>
       <Footer />
     </>
   );

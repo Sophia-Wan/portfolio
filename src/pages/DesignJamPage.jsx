@@ -9,21 +9,38 @@ export function DesignJamPage() {
     <>
       <InteractiveBackground />
       <Header />
-      <div className="design-jam-page">
-        <div className="design-jam-content">
-          <ProjectShowcase
-            image="/Design Jam.svg"
-            number="05"
-            name="Design Jam"
-            link="#"
-          />
-          <div className="project-placeholder-box">
-          <p className="project-placeholder-text">
-            Currently under construction. Thank you for your patience.
-          </p>
+      <main className="design-jam-page">
+        <ProjectShowcase
+          image="/Design Jam.svg"
+          number="05"
+          name="Design Jam"
+          link="#"
+        />
+
+        <div className="design-jam-description">
+          <div className="design-jam-description-left">
+            <h2 className="design-jam-description-heading">Overview</h2>
+            <p className="design-jam-description-text">
+             About Design Jam
+            </p>
+          </div>
+          <div className="design-jam-description-right">
+            <h2 className="design-jam-description-heading">Year</h2>
+            <p className="design-jam-description-text">2024</p>
+            <h2 className="design-jam-description-heading">Team</h2>
+            <p className="design-jam-description-text">Solo project</p>
+            <h2 className="design-jam-description-heading">My role</h2>
+            <p className="design-jam-description-text">Designer</p>
           </div>
         </div>
-      </div>
+
+        <div className="design-jam-design-desc">
+          <h2 className="design-jam-design-desc-heading">Design</h2>
+          <p className="design-jam-design-desc-text">
+           Desc....
+          </p>
+        </div>
+      </main>
       <Footer />
     </>
   );

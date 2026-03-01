@@ -47,19 +47,28 @@ export function KaguyaPage() {
                         </p>
                     </div>
                     <div className='kaguya-description-right'>
-                        <h2 className='kaguya-description-heading'>Design</h2>
-                        <p className='kaguya-description-text'>
-                            The can designs feature soft gradients, crescent
-                            moon, and star details to create a dreamy, calming
-                            atmosphere, while playful bunny illustrations add a
-                            calm yet cute personality. Each flavour is
-                            differentiated through its own colour palette while
-                            maintaining a cohesive visual identity. Rounded
-                            typography and a clean layout ensure clarity and
-                            approachability, resulting in packaging that feels
-                            comforting, whimsical, and soothing.
-                        </p>
+                        <h2 className='kaguya-description-heading'>Year</h2>
+                        <p className='kaguya-description-text'>2024</p>
+                        <h2 className='kaguya-description-heading'>Team</h2>
+                        <p className='kaguya-description-text'>Solo project</p>
+                        <h2 className='kaguya-description-heading'>My role</h2>
+                        <p className='kaguya-description-text'>Designer</p>
                     </div>
+                </div>
+
+                <div className='kaguya-design-desc'>
+                    <h2 className='kaguya-design-desc-heading'>Design</h2>
+                    <p className='kaguya-design-desc-text'>
+                        The can designs feature soft gradients, crescent
+                        moon, and star details to create a dreamy, calming
+                        atmosphere, while playful bunny illustrations add a
+                        calm yet cute personality. Each flavour is
+                        differentiated through its own colour palette while
+                        maintaining a cohesive visual identity. Rounded
+                        typography and a clean layout ensure clarity and
+                        approachability, resulting in packaging that feels
+                        comforting, whimsical, and soothing.
+                    </p>
                 </div>
 
                 <div className='kaguya-carousel'>
@@ -118,6 +127,7 @@ export function KaguyaPage() {
                                 alt="Kaguya can 1"
                                 camera-controls
                                 auto-rotate
+                                camera-orbit="180deg 75deg 105%"
                                 className="kaguya-model-viewer"
                             />
                         </div>
@@ -127,6 +137,7 @@ export function KaguyaPage() {
                                 alt="Kaguya can 2"
                                 camera-controls
                                 auto-rotate
+                                camera-orbit="180deg 75deg 105%"
                                 className="kaguya-model-viewer"
                             />
                         </div>
@@ -136,6 +147,7 @@ export function KaguyaPage() {
                                 alt="Kaguya can 3"
                                 camera-controls
                                 auto-rotate
+                                camera-orbit="180deg 75deg 105%"
                                 className="kaguya-model-viewer"
                             />
                         </div>
