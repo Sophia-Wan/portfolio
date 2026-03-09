@@ -1,6 +1,6 @@
 import "./sparklebutton.css"
 
-export function SparkleButton({ children, onClick }) {
+export function SparkleButton({ children, onClick, disabled = false }) {
   const StarSVG = () => (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
@@ -27,25 +27,34 @@ export function SparkleButton({ children, onClick }) {
   )
 
   return (
-    <button className="sparkle-button" onClick={onClick}>
-      <div className="star-1">
-        <StarSVG />
-      </div>
-      <div className="star-2">
-        <StarSVG />
-      </div>
-      <div className="star-3">
-        <StarSVG />
-      </div>
-      <div className="star-4">
-        <StarSVG />
-      </div>
-      <div className="star-5">
-        <StarSVG />
-      </div>
-      <div className="star-6">
-        <StarSVG />
-      </div>
+    <button
+      className={`sparkle-button${disabled ? " sparkle-button--disabled" : ""}`}
+      onClick={disabled ? undefined : onClick}
+      disabled={disabled}
+      aria-disabled={disabled ? "true" : undefined}
+    >
+      {!disabled && (
+        <>
+          <div className="star-1">
+            <StarSVG />
+          </div>
+          <div className="star-2">
+            <StarSVG />
+          </div>
+          <div className="star-3">
+            <StarSVG />
+          </div>
+          <div className="star-4">
+            <StarSVG />
+          </div>
+          <div className="star-5">
+            <StarSVG />
+          </div>
+          <div className="star-6">
+            <StarSVG />
+          </div>
+        </>
+      )}
       {children}
     </button>
   )

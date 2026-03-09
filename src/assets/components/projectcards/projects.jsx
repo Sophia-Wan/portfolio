@@ -5,17 +5,20 @@ import { useNavigate } from "react-router-dom"
 export function ProjectCard({ title, year, image }) {
   const navigate = useNavigate();
 
+  const routes = {
+    "Forge": "/forge",
+    "Moolahmate": "/moolahmate",
+    "Bandit Breakout": "/bandit-breakout",
+    "PoPa": "/popa",
+    "Design Jam": "/design-jam",
+    "GameCatalog": "/gamecatalog"
+  };
+
+  const comingSoonTitles = ["Moolahmate", "PoPa", "Design Jam", "GameCatalog"];
+  const isComingSoon = comingSoonTitles.includes(title);
+
   const handleViewProject = () => {
-    // Map project titles to their routes
-    const routes = {
-      "Forge": "/forge",
-      "Moolahmate": "/moolahmate",
-      "Bandit Breakout": "/bandit-breakout",
-      "PoPa": "/popa",
-      "Design Jam": "/design-jam",
-      "GameCatalog": "/gamecatalog"
-    };
-    
+    if (isComingSoon) return;
     const route = routes[title];
     if (route) {
       navigate(route);
@@ -31,7 +34,9 @@ export function ProjectCard({ title, year, image }) {
       <div className="project-info">
         <h3>{title}</h3>
         <p className="project-year">{year}</p>
-        <SparkleButton onClick={handleViewProject}>View Project</SparkleButton>
+        <SparkleButton onClick={handleViewProject} disabled={isComingSoon}>
+          {isComingSoon ? "Coming soon" : "View Project"}
+        </SparkleButton>
       </div>
     </div>
   )

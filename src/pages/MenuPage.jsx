@@ -44,10 +44,22 @@ export function MenuPage() {
           <div className="menu-description-right">
             <h2 className="menu-description-heading">Year</h2>
             <p className="menu-description-text">2024</p>
-            <h2 className="menu-description-heading">Team</h2>
-            <p className="menu-description-text">Solo project</p>
-            <h2 className="menu-description-heading">My role</h2>
-            <p className="menu-description-text">Designer</p>
+         
+            <h2 className="menu-description-heading">Apps Used</h2>
+            <div className="menu-app-tags">
+              <div className="menu-app-tag">
+                <img src="/cloud_tag.svg" alt="" className="menu-app-tag-icon" />
+                <span>Figma</span>
+              </div>
+              <div className="menu-app-tag">
+                <img src="/cloud_tag.svg" alt="" className="menu-app-tag-icon" />
+                <span>Illustrator</span>
+              </div>
+              <div className="menu-app-tag">
+                <img src="/cloud_tag.svg" alt="" className="menu-app-tag-icon" />
+                <span>Photoshop</span>
+              </div>
+            </div>
           </div>
         </div>
 

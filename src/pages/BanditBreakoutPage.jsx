@@ -2,13 +2,26 @@ import { Header } from "../assets/components/navbar/navbar.jsx";
 import { Footer } from "../assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "../assets/components/background/InteractiveBackground.jsx";
 import { ProjectShowcase } from "../assets/components/showcase/ProjectShowcase.jsx";
+import { CaseStudyTOC } from "../assets/components/toc/CaseStudyTOC.jsx";
 import "./BanditBreakoutPage.css";
 
 export function BanditBreakoutPage() {
+  const tocSections = [
+    { id: "overview", label: "Overview" },
+    { id: "design-goal", label: "Design Goal" },
+    { id: "research", label: "Research" },
+    { id: "gameplay-mechanics", label: "Gameplay Mechanics" },
+    { id: "tiles", label: "Tiles" },
+    { id: "bridge", label: "Bridge" },
+    { id: "map-areas", label: "Map Areas" },
+    { id: "icons", label: "Icons" },
+  ];
+
   return (
     <>
       <InteractiveBackground />
       <Header />
+      <CaseStudyTOC sections={tocSections} ariaLabel="Bandit Breakout sections" />
       <div className="bandit-breakout-page">
         <div className="bandit-breakout-content">
           <ProjectShowcase
@@ -17,7 +30,7 @@ export function BanditBreakoutPage() {
             name="Bandit Breakout"
             link="#"
           />
-          <div className="bb-description">
+          <div id="overview" className="bb-description case-toc-target">
             <div className="bb-description-top">
               <div className="bb-description-left">
                 <h2 className="bb-description-heading">Overview</h2>
@@ -72,7 +85,7 @@ export function BanditBreakoutPage() {
           </div>
 
           <div className="bb-section-card">
-            <div className="bb-section-block">
+            <div id="design-goal" className="bb-section-block case-toc-target">
               <h2 className="bb-section-heading">Design Goal</h2>
               <p className="bb-section-text">
                 Our goal of this project was to create a re-playable board game
@@ -110,7 +123,7 @@ export function BanditBreakoutPage() {
               </div>
             </div>
 
-            <div className="bb-section-block bb-research">
+            <div id="research" className="bb-section-block bb-research case-toc-target">
               <h2 className="bb-section-heading">Research</h2>
               <div className="bb-research-content">
                 <div className="bb-research-text">
@@ -138,11 +151,11 @@ export function BanditBreakoutPage() {
               </div>
             </div>
 
-            <div className="bb-section-block bb-mechanics">
+            <div id="gameplay-mechanics" className="bb-section-block bb-mechanics case-toc-target">
               <h2 className="bb-section-heading">Gameplay Mechanics</h2>
               <div className="bb-tiles-row">
                 <div className="bb-tiles-text">
-                  <h3 className="bb-subheading">Tiles</h3>
+                  <h3 id="tiles" className="bb-subheading case-toc-target">Tiles</h3>
                   <p className="bb-section-text bb-tiles-intro">
                     Each tile created has its own respective event that happens on it.
                     While creating the tiles many thoughts went to thinking how each
@@ -158,7 +171,7 @@ export function BanditBreakoutPage() {
                   </div>
                 </div>
               </div>
-              <h3 className="bb-subheading">Bridge</h3>
+              <h3 id="bridge" className="bb-subheading case-toc-target">Bridge</h3>
               <div className="bb-bridge-row">
                 <div className="bb-bridge-image-wrap">
                   <img src="/Bridge.png" alt="Bridge" className="bb-bridge-image" />
@@ -172,7 +185,7 @@ export function BanditBreakoutPage() {
                 </p>
               </div>
 
-              <h3 className="bb-subheading">Map Areas</h3>
+              <h3 id="map-areas" className="bb-subheading case-toc-target">Map Areas</h3>
               <div className="bb-image-desc-list">
                 <div className="bb-image-desc-row">
                   <div className="bb-image-desc-box">
@@ -239,7 +252,7 @@ export function BanditBreakoutPage() {
                 </div>
               </div>
 
-              <h3 className="bb-subheading bb-icons-heading">Icons</h3>
+              <h3 id="icons" className="bb-subheading bb-icons-heading case-toc-target">Icons</h3>
               <div className="bb-icons-row">
                 <div className="bb-icons-grid">
                   <div className="bb-icons-image-box">

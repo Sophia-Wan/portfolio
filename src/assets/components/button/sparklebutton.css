@@ -14,6 +14,15 @@
   overflow: visible;
 }
 
+.sparkle-button--disabled,
+.sparkle-button--disabled:hover {
+  cursor: default;
+  opacity: 0.7;
+  background: rgba(148, 102, 178, 0.6);
+  color: var(--color-white);
+  box-shadow: none;
+}
+
 .star-1 {
   position: absolute;
   top: 20%;

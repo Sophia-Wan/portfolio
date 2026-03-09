@@ -49,10 +49,22 @@ export function KaguyaPage() {
                     <div className='kaguya-description-right'>
                         <h2 className='kaguya-description-heading'>Year</h2>
                         <p className='kaguya-description-text'>2024</p>
-                        <h2 className='kaguya-description-heading'>Team</h2>
-                        <p className='kaguya-description-text'>Solo project</p>
-                        <h2 className='kaguya-description-heading'>My role</h2>
-                        <p className='kaguya-description-text'>Designer</p>
+                       
+                        <h2 className='kaguya-description-heading'>Apps Used</h2>
+                        <div className="kaguya-app-tags">
+                            <div className="kaguya-app-tag">
+                                <img src="/cloud_tag.svg" alt="" className="kaguya-app-tag-icon" />
+                                <span>Figma</span>
+                            </div>
+                            <div className="kaguya-app-tag">
+                                <img src="/cloud_tag.svg" alt="" className="kaguya-app-tag-icon" />
+                                <span>Illustrator</span>
+                            </div>
+                            <div className="kaguya-app-tag">
+                                <img src="/cloud_tag.svg" alt="" className="kaguya-app-tag-icon" />
+                                <span>Blender</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

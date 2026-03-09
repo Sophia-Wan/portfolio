@@ -19,14 +19,14 @@ export function Footer() {
         </div>
         
         <div className="footer-center">
-          <img src="/Moon-Wisteria.svg" alt="Moon with wisteria" className="footer-logo" />
+          <img src="/Logo.svg" alt="Moon with wisteria" className="footer-logo" />
           <p className="footer-name">Sophia Wan</p>
         </div>
         
         <div className="footer-right">
           <div className="footer-divider"></div>
           <div className="footer-nav">
-            <a href="#resume">Resume</a>
+            
             <a href="#designs">Design</a>
             <a href="#projects">Project</a>
             <a href="#contact">Contact</a>

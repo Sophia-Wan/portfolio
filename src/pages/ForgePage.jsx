@@ -5,15 +5,29 @@ import { InteractiveBackground } from "../assets/components/background/Interacti
 import { FigmaPrototype } from "../assets/components/figma/FigmaPrototype.jsx";
 import { LiveApp } from "../assets/components/liveapp/LiveApp.jsx";
 import { ProjectShowcase } from "../assets/components/showcase/ProjectShowcase.jsx";
+import { CaseStudyTOC } from "../assets/components/toc/CaseStudyTOC.jsx";
 import "./ForgePage.css";
 
 export function ForgePage() {
     const navigate = useNavigate();
+    const tocSections = [
+        { id: "overview", label: "Overview" },
+        { id: "problem", label: "Problem" },
+        { id: "ideation", label: "Ideation" },
+        { id: "illustration", label: "Illustration" },
+        { id: "ai-chatbox", label: "AI ChatBox" },
+        { id: "badge", label: "Badge" },
+        { id: "onboarding", label: "Onboarding" },
+        { id: "trade-icons", label: "Trade Icons" },
+        { id: "challenges", label: "Challenges" },
+        { id: "final", label: "Final" },
+    ];
 
     return (
         <>
             <InteractiveBackground />
             <Header />
+            <CaseStudyTOC sections={tocSections} ariaLabel="Forge sections" />
             <div className='forge-page'>
                 <div className='forge-content'>
                     <ProjectShowcase
@@ -23,7 +37,7 @@ export function ForgePage() {
                         link='http://forgecareers.ca/'
                     />
 
-                    <div className='forge-description'>
+                    <div id="overview" className='forge-description case-toc-target'>
                         <div className='forge-description-left'>
                             <h2 className='forge-description-heading'>
                                 Overview
@@ -58,7 +72,7 @@ export function ForgePage() {
                     </div>
 
                     <div className='forge-sections-wrapper'>
-                        <div className='forge-problem forge-section-card'>
+                        <div id="problem" className='forge-problem forge-section-card case-toc-target'>
                             <h2 className='forge-description-heading'>
                                 Problem
                             </h2>
@@ -99,7 +113,7 @@ export function ForgePage() {
                             </div>
                         </div>
 
-                        <div className='forge-section-card'>
+                        <div id="ideation" className='forge-section-card case-toc-target'>
                             <div className='forge-section-layout'>
                                 <div className='forge-section-text'>
                                     <h2 className='forge-description-heading'>
@@ -132,7 +146,7 @@ export function ForgePage() {
                             </div>
                         </div>
 
-                        <div className='forge-section-card'>
+                        <div id="illustration" className='forge-section-card case-toc-target'>
                             <div className='forge-section-layout forge-section-layout--reverse'>
                                 <div className='forge-section-text'>
                                     <h2 className='forge-description-heading'>
@@ -176,7 +190,7 @@ export function ForgePage() {
                             </div>
                         </div>
 
-                        <div className='forge-section-card'>
+                        <div id="ai-chatbox" className='forge-section-card case-toc-target'>
                             <div className='forge-section-layout'>
                                 <div className='forge-section-text'>
                                     <h2 className='forge-description-heading'>
@@ -213,7 +227,7 @@ export function ForgePage() {
                             </div>
                         </div>
 
-                        <div className='forge-section-card'>
+                        <div id="badge" className='forge-section-card case-toc-target'>
                             <div className='forge-section-layout'>
                                 <div className='forge-section-text'>
                                     <h2 className='forge-description-heading'>
@@ -239,7 +253,7 @@ export function ForgePage() {
                             </div>
                         </div>
 
-                        <div className='forge-section-card'>
+                        <div id="onboarding" className='forge-section-card case-toc-target'>
                             <div className='forge-section-layout forge-section-layout--reverse'>
                                 <div className='forge-section-text'>
                                     <h2 className='forge-description-heading'>
@@ -285,7 +299,7 @@ export function ForgePage() {
                             </div>
                         </div>
 
-                        <div className='forge-section-card'>
+                        <div id="trade-icons" className='forge-section-card case-toc-target'>
                             <div className='forge-section-layout'>
                                 <div className='forge-section-text'>
                                     <h2 className='forge-description-heading'>
@@ -323,7 +337,7 @@ export function ForgePage() {
                             </div>
                         </div>
 
-                        <div className='forge-section-card'>
+                        <div id="challenges" className='forge-section-card case-toc-target'>
                             <div className='forge-section-layout forge-section-layout--reverse'>
                                 <div className='forge-section-text'>
                                     <h2 className='forge-description-heading'>
@@ -353,7 +367,7 @@ export function ForgePage() {
                             </div>
                         </div>
 
-                        <div className='forge-section-card'>
+                        <div id="final" className='forge-section-card case-toc-target'>
                             <div className='forge-final'>
                                 <h2 className='forge-description-heading'>
                                     Final

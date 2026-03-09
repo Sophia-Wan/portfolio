@@ -52,6 +52,45 @@
     margin: 0;
 }
 
+.kaguya-app-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.kaguya-app-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.18rem 0.8rem 0.18rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(255, 217, 241, 0.18);
+    border: 1px solid rgba(68, 7, 83, 0.5);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.kaguya-app-tag-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.kaguya-app-tag span {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+}
+
+.kaguya-app-tag:hover {
+    background: rgba(255, 241, 252, 0.3);
+    border-color: rgba(68, 7, 83, 0.7);
+    transform: translateY(-1px);
+}
+
 @media (max-width: 768px) {
     .kaguya-description {
         grid-template-columns: 1fr;

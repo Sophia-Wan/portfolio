@@ -1,0 +1,123 @@
+.case-toc {
+  --case-toc-bg: rgba(63, 24, 86, 0.95);
+  --case-toc-border: rgba(255, 255, 255, 0.08);
+  --case-toc-text: rgba(255, 255, 255, 0.6);
+  --case-toc-text-active: rgba(255, 255, 255, 0.9);
+  --case-toc-moon: #f3d38a;
+  --case-toc-moon-glow: rgba(243, 211, 138, 0.35);
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.case-toc--left {
+  left: 18px;
+}
+
+.case-toc--right {
+  right: 18px;
+}
+
+.case-toc__pill {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 12px;
+  border-radius: 200px;
+  background: var(--case-toc-bg);
+  border: 1px solid var(--case-toc-border);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.case-toc__item {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--case-toc-text);
+  font: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    transform 140ms ease,
+    background 140ms ease,
+    color 140ms ease;
+}
+
+.case-toc__item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.case-toc__item:focus-visible {
+  outline: 2px solid rgba(243, 211, 138, 0.55);
+  outline-offset: 2px;
+}
+
+.case-toc__item.is-active {
+  color: var(--case-toc-text-active);
+}
+
+.case-toc__label {
+  max-width: 44px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-primary, inherit);
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  opacity: 0.55;
+  transition:
+    max-width 180ms ease,
+    opacity 180ms ease;
+}
+
+.case-toc__pill:hover .case-toc__label {
+  max-width: 140px;
+  opacity: 0.9;
+}
+
+.case-toc__icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  overflow: hidden;
+ 
+}
+
+.case-toc__moon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+  box-shadow: none;
+}
+
+.case-toc__item.is-active .case-toc__moon {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Targets we scroll to */
+.case-toc-target {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 900px) {
+  .case-toc {
+    display: none;
+  }
+}
+
