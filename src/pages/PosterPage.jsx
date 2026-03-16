@@ -37,8 +37,7 @@ export function PosterPage() {
         <div className="poster-design-desc">
           <h2 className="poster-design-desc-heading">Design</h2>
           <p className="poster-design-desc-text">
-            Add your design description here—concept, typography, colour,
-            composition, or any other design notes for the poster.
+           Desc....
           </p>
         </div>
       </main>

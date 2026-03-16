@@ -14,7 +14,7 @@ export function ProjectCard({ title, year, image }) {
     "GameCatalog": "/gamecatalog"
   };
 
-  const comingSoonTitles = ["Moolahmate", "PoPa", "Design Jam", "GameCatalog"];
+  const comingSoonTitles = ["PoPa", "Design Jam", "GameCatalog"];
   const isComingSoon = comingSoonTitles.includes(title);
 
   const handleViewProject = () => {

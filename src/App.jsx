@@ -54,11 +54,6 @@ function Home() {
                     year='2024'
                     image='/Design Jam.svg'
                 />
-                <ProjectCard
-                    title='GameCatalog'
-                    year='2024'
-                    image='/GamesVault.svg'
-                />
             </Projects>
             <Footer />
         </>

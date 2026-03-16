@@ -22,9 +22,9 @@
 .case-toc__pill {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   padding: 16px 12px;
-  border-radius: 200px;
+  border-radius: 100px;
   background: var(--case-toc-bg);
   border: 1px solid var(--case-toc-border);
   box-shadow:
@@ -110,7 +110,6 @@
   box-shadow: none;
 }
 
-/* Targets we scroll to */
 .case-toc-target {
   scroll-margin-top: 120px;
 }

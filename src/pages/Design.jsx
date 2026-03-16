@@ -33,12 +33,33 @@ export function DesignsPage() {
                         image='/poster.svg'
                         year='2024'
                     />
-                    <DesignCard
-                        title='Wingnutoroo'
-                        image='/wingnutoroo.svg'
-                        year='2024'
-                    />
                 </DesignProjects>
+
+                <section className="design-club-section">
+                    <h2 className="design-club-heading">Club Projects</h2>
+                    <div className="design-club-grid">
+                        <div className="design-club-card">
+                            <div className="design-club-image-wrap">
+                                <img src="/club1.png" alt="Club design 1" className="design-club-image" />
+                            </div>
+                        </div>
+                        <div className="design-club-card">
+                            <div className="design-club-image-wrap">
+                                <img src="/club2.png" alt="Club design 2" className="design-club-image" />
+                            </div>
+                        </div>
+                        <div className="design-club-card">
+                            <div className="design-club-image-wrap">
+                                <img src="/club3.png" alt="Club design 3" className="design-club-image" />
+                            </div>
+                        </div>
+                        <div className="design-club-card">
+                            <div className="design-club-image-wrap">
+                                <img src="/club4.png" alt="Club design 4" className="design-club-image" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>
