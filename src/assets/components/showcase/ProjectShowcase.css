@@ -20,6 +20,14 @@
     justify-content: center;
     min-width: 0;
 }
+
+/* Wraps the showcase img so pages can clip with border-radius + overflow (reliable across browsers) */
+.project-showcase-image-wrap {
+    display: inline-block;
+    flex-shrink: 0;
+    line-height: 0;
+    vertical-align: top;
+}
 .project-card-left {
     border-radius: 24px;
     padding: 2rem;

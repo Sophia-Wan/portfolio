@@ -27,9 +27,9 @@ export function Footer() {
           <div className="footer-divider"></div>
           <div className="footer-nav">
             
-            <a href="#designs">Design</a>
-            <a href="#projects">Project</a>
-            <a href="#contact">Contact</a>
+            <a href="/designs">Design</a>
+            <a href="/#projects">Project</a>
+            <a href="/contact">Contact</a>
           </div>
           <div className="footer-divider"></div>
         </div>

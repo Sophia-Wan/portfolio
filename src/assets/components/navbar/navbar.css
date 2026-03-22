@@ -70,3 +70,9 @@
 .nav-link:hover {
   color: var(--color-background-image);
 }
+
+.nav-link--active {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

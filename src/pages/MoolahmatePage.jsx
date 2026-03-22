@@ -2,7 +2,13 @@ import { Header } from "../assets/components/navbar/navbar.jsx";
 import { Footer } from "../assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "../assets/components/background/InteractiveBackground.jsx";
 import { ProjectShowcase } from "../assets/components/showcase/ProjectShowcase.jsx";
+import { FigmaPrototype } from "../assets/components/figma/FigmaPrototype.jsx";
 import "./MoolahmatePage.css";
+
+/** Figma: Share → Copy link (must include /proto/). Prefer .env; or paste URL below. */
+const MOOLAHMATE_FIGMA_URL_FALLBACK = "https://www.figma.com/proto/5iSUaXWfQOPQpaH66eqeA6/High-Fi-wireframes?node-id=2-2&t=HInkgZeGdIAWZsWe-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=2%3A15";
+const MOOLAHMATE_FIGMA_URL =
+  import.meta.env.VITE_MOOLAHMATE_FIGMA_URL || MOOLAHMATE_FIGMA_URL_FALLBACK;
 
 export function MoolahmatePage() {
   return (
@@ -44,6 +50,38 @@ export function MoolahmatePage() {
           <p className="moolahmate-design-desc-text">
             MoolahMate includes several features designed to make managing money simple and engaging. The app offers detailed expense tracking, allowing users to record and categorize their spending so they can clearly see where their money goes. It also supports personal goal setting, enabling users to create savings goals and track their progress over time, helping them stay motivated and build better financial habits. Guiding the experience is MooMoo the Cow, the app’s friendly mascot who provides tips, encouragement, and a playful touch that makes managing finances feel less intimidating and more enjoyable.
           </p>
+        
+
+          <div className="moolahmate-figma">
+            {MOOLAHMATE_FIGMA_URL ? (
+              <FigmaPrototype
+                figmaUrl={MOOLAHMATE_FIGMA_URL}
+                title="Try it Out!"
+                height="min(720px, 85vh)"
+                loadStrategy="immediate"
+                theme="light"
+              />
+            ) : (
+              <p className="moolahmate-figma-hint">
+                Add your Figma prototype URL: set{" "}
+                <code className="moolahmate-figma-code">VITE_MOOLAHMATE_FIGMA_URL</code>{" "}
+                in a <code className="moolahmate-figma-code">.env</code> file, or edit{" "}
+                <code className="moolahmate-figma-code">MoolahmatePage.jsx</code>.
+                Set <code className="moolahmate-figma-code">loadStrategy=&quot;interaction&quot;</code> on{" "}
+                <code className="moolahmate-figma-code">FigmaPrototype</code> if you prefer click-to-load instead.
+              </p>
+            )}
+          </div>
+          <h2 className="moolahmate-design-desc-heading">Meet the Team</h2>
+          <div className="moolahmate-team-image-wrap">
+            <img
+              src="/Meet-The-Team.png"
+              alt="MoolahMate team"
+              className="moolahmate-team-image"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
       </main>
       <Footer />

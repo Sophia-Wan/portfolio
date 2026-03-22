@@ -23,11 +23,13 @@ export function ProjectShowcase({ projects, image, number, name, link }) {
     return (
         <div className='project-showcase-container'>
             <div className='project-showcase-content'>
-                <img
-                    src={currentProject.image}
-                    alt={currentProject.name}
-                    className='project-showcase-image'
-                />
+                <div className='project-showcase-image-wrap'>
+                    <img
+                        src={currentProject.image}
+                        alt={currentProject.name}
+                        className='project-showcase-image'
+                    />
+                </div>
 
                 <div className='project-details-right'>
                     <div className='project-number'>

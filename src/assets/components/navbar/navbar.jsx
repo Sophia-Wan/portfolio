@@ -1,7 +1,5 @@
-"use client"
-
-import { Link } from "react-router-dom"
-import "./navbar.css"
+import { Link, NavLink } from "react-router-dom";
+import "./navbar.css";
 
 export function Header() {
   return (
@@ -11,19 +9,29 @@ export function Header() {
           <img src="/Logo.svg" alt="Logo" className="logo-img" />
           <span className="logo-text">Sophia Wan</span>
         </Link>
-        
+
         <div className="nav-links">
-          <Link to="/designs" className="nav-link">
+          <NavLink
+            to="/designs"
+            className={({ isActive }) =>
+              `nav-link${isActive ? " nav-link--active" : ""}`
+            }
+          >
             Designs
-          </Link>
+          </NavLink>
           <a href="/#projects" className="nav-link">
             Projects
           </a>
-          <a href="/#contact" className="nav-link">
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `nav-link${isActive ? " nav-link--active" : ""}`
+            }
+          >
             Contact
-          </a>
+          </NavLink>
         </div>
       </nav>
     </header>
-  )
+  );
 }

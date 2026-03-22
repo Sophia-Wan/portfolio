@@ -28,11 +28,7 @@ export function DesignsPage() {
                         image='/magazine.svg'
                         year='2024'
                     />
-                    <DesignCard
-                        title='Poster'
-                        image='/poster.svg'
-                        year='2024'
-                    />
+                    {/* Poster — hidden for now; route /poster still works if linked elsewhere */}
                 </DesignProjects>
 
                 <section className="design-club-section">

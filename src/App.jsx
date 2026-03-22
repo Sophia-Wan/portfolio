@@ -20,6 +20,7 @@ import { MenuPage } from "./pages/MenuPage.jsx";
 import { MagazinePage } from "./pages/MagazinePage.jsx";
 import { PosterPage } from "./pages/PosterPage.jsx";
 import { WingnutorooPage } from "./pages/WingnutorooPage.jsx";
+import { ContactPage } from "./pages/ContactPage.jsx";
 import "./App.css";
 
 function Home() {
@@ -78,6 +79,7 @@ function App() {
                     <Route path="/magazine" element={<MagazinePage />} />
                     <Route path="/poster" element={<PosterPage />} />
                     <Route path="/wingnutoroo" element={<WingnutorooPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
                 </Routes>
                 <ScrollToTopButton />
             </>

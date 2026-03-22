@@ -2,7 +2,28 @@ import { Header } from "../assets/components/navbar/navbar.jsx";
 import { Footer } from "../assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "../assets/components/background/InteractiveBackground.jsx";
 import { ProjectShowcase } from "../assets/components/showcase/ProjectShowcase.jsx";
+import { MagazineFlipbook } from "../assets/components/magazine/MagazineFlipbook.jsx";
 import "./MagazinePage.css";
+
+
+const MAGAZINE_PAGE_IMAGES = [
+  "/magazine/CoverPage.png",
+  "/magazine/pg1.png",
+  "/magazine/pg2.png",
+  "/magazine/pg3.png",
+  "/magazine/pg4.png",
+  "/magazine/pg5.png",
+  "/magazine/pg6.png",
+  "/magazine/pg7.png",
+  "/magazine/pg8.png",
+  "/magazine/pg9.png",
+  "/magazine/pg10.png",
+  "/magazine/pg11.png",
+  "/magazine/pg12.png",
+  "/magazine/pg13.png",
+  "/magazine/pg14.png",
+  "/magazine/pg15.png",
+];
 
 export function MagazinePage() {
   return (
@@ -11,7 +32,7 @@ export function MagazinePage() {
       <Header />
       <main className="magazine-page">
         <ProjectShowcase
-          image="/magazine.svg"
+          image="/MagazineCover.png"
           number="03"
           name="Magazine"
           link="#"
@@ -27,18 +48,38 @@ export function MagazinePage() {
           <div className="magazine-description-right">
             <h2 className="magazine-description-heading">Year</h2>
             <p className="magazine-description-text">2024</p>
-            <h2 className="magazine-description-heading">Team</h2>
-            <p className="magazine-description-text">Solo project</p>
-            <h2 className="magazine-description-heading">My role</h2>
-            <p className="magazine-description-text">Designer</p>
+            <h2 className="magazine-description-heading">Apps Used</h2>
+            <div className="magazine-app-tags">
+              <div className="magazine-app-tag">
+                <img src="/cloud_tag.svg" alt="" className="magazine-app-tag-icon" />
+                <span>Figma</span>
+              </div>
+              <div className="magazine-app-tag">
+                <img src="/cloud_tag.svg" alt="" className="magazine-app-tag-icon" />
+                <span>InDesign</span>
+              </div>
+              <div className="magazine-app-tag">
+                <img src="/cloud_tag.svg" alt="" className="magazine-app-tag-icon" />
+                <span>Photoshop</span>
+              </div>
+              <div className="magazine-app-tag">
+                <img src="/cloud_tag.svg" alt="" className="magazine-app-tag-icon" />
+                <span>Illustrator</span>
+              </div>
+            </div>
+            </div>
           </div>
-        </div>
 
         <div className="magazine-design-desc">
           <h2 className="magazine-design-desc-heading">Design</h2>
           <p className="magazine-design-desc-text">
             Desc....
           </p>
+
+          <h2 className="magazine-design-desc-heading magazine-flip-section-title">
+            Take a look!
+          </h2>
+          <MagazineFlipbook pages={MAGAZINE_PAGE_IMAGES} />
         </div>
       </main>
       <Footer />
