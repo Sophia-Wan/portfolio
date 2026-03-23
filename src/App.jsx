@@ -11,8 +11,6 @@ import { ScrollToTopButton } from "./assets/components/ScrollToTop/ScrollToTopBu
 import { ForgePage } from "./pages/ForgePage.jsx";
 import { MoolahmatePage } from "./pages/MoolahmatePage.jsx";
 import { BanditBreakoutPage } from "./pages/BanditBreakoutPage.jsx";
-import { PoPaPage } from "./pages/PoPaPage.jsx";
-import { DesignJamPage } from "./pages/DesignJamPage.jsx";
 import { GameCatalogPage } from "./pages/GameCatalogPage.jsx";
 import { DesignsPage } from "./pages/Design.jsx";
 import { KaguyaPage } from "./pages/Kaguya.jsx";
@@ -45,16 +43,7 @@ function Home() {
                     year='2024'
                     image='/Moolahmate.svg'
                 />
-                <ProjectCard
-                    title='PoPa'
-                    year='2024'
-                    image='/PoPa.svg'
-                />
-                <ProjectCard
-                    title='Design Jam'
-                    year='2024'
-                    image='/Design Jam.svg'
-                />
+                {/* PoPa & Design Jam — hidden for now; re-add ProjectCards + routes when ready */}
             </Projects>
             <Footer />
         </>
@@ -70,8 +59,6 @@ function App() {
                     <Route path="/forge" element={<ForgePage />} />
                     <Route path="/moolahmate" element={<MoolahmatePage />} />
                     <Route path="/bandit-breakout" element={<BanditBreakoutPage />} />
-                    <Route path="/popa" element={<PoPaPage />} />
-                    <Route path="/design-jam" element={<DesignJamPage />} />
                     <Route path="/gamecatalog" element={<GameCatalogPage />} />
                     <Route path="/designs" element={<DesignsPage />} />
                     <Route path="/kaguya" element={<KaguyaPage />} />
