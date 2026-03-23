@@ -25,7 +25,7 @@ export function DesignsPage() {
                     />
                     <DesignCard
                         title='Magazine'
-                        image='/magazine.svg'
+                        image='/MagazineCover.png'
                         year='2024'
                     />
                     {/* Poster — hidden for now; route /poster still works if linked elsewhere */}

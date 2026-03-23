@@ -42,12 +42,12 @@ export function MagazinePage() {
           <div className="magazine-description-left">
             <h2 className="magazine-description-heading">Overview</h2>
             <p className="magazine-description-text">
-              About Magazine
+            This project is a travel magazine cover about a tour from Shanghai to Hong Kong, combining modern city vibes with cultural elements. I focused on creating a clear and eye-catching layout that highlights the journey while keeping the design clean and easy to read.
             </p>
           </div>
           <div className="magazine-description-right">
             <h2 className="magazine-description-heading">Year</h2>
-            <p className="magazine-description-text">2024</p>
+            <p className="magazine-description-text">2025</p>
             <h2 className="magazine-description-heading">Apps Used</h2>
             <div className="magazine-app-tags">
               <div className="magazine-app-tag">
@@ -73,7 +73,9 @@ export function MagazinePage() {
         <div className="magazine-design-desc">
           <h2 className="magazine-design-desc-heading">Design</h2>
           <p className="magazine-design-desc-text">
-            Desc....
+         
+        
+          I used bold typography for the title to make it stand out, paired with a simpler font for the supporting text to create contrast. The colors and imagery were chosen to reflect both the energy of city life and the excitement of travel, while keeping the overall look balanced and polished.
           </p>
 
           <h2 className="magazine-design-desc-heading magazine-flip-section-title">
