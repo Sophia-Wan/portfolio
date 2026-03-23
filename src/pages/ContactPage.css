@@ -145,12 +145,25 @@
   min-height: 140px;
 }
 
+.contact-label-required {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
 .contact-form-status {
   font-family: var(--font-secondary);
   font-size: 0.9rem;
   color: var(--color-primary);
   margin: 0;
   text-align: center;
+}
+
+.contact-form-status--success {
+  color: #2d6a4f;
+}
+
+.contact-form-status--error {
+  color: #9d174d;
 }
 
 .contact-submit {
@@ -178,6 +191,17 @@
 .contact-submit:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
+}
+
+.contact-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-submit:disabled:hover {
+  background: var(--color-secondary);
+  transform: none;
 }
 
 @media (max-width: 900px) {

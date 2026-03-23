@@ -7,12 +7,12 @@ export function Footer() {
         <div className="footer-left">
           <div className="footer-contact">
             <img src="/email.svg?v=2" alt="Email" className="icon email-icon" />
-            <a href="wwan18@my.bcit.ca">wwan18@my.bcit.ca</a>
+            <a href="mailto:wysophiawan@gmail.com">wysophiawan@gmail.com</a>
           </div>
           <div className="footer-divider"></div>
           <div className="footer-contact">
             <img src="/LinkedIn.svg" alt="LinkedIn" className="icon linkedin-icon" />
-            <a href="https://linkedin.com/sophiawan" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/wysophia-wan" target="_blank" rel="noopener noreferrer">
               linkedin.com/sophiawan
             </a>
           </div>
