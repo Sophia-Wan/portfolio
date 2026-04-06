@@ -1,10 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./assets/components/navbar/navbar.jsx";
+import LandingSection from "./assets/components/landing/LandingSection.jsx";
 import { Hero } from "./assets/components/hero/hero.jsx";
 import {
     Projects,
     ProjectCard,
 } from "./assets/components/projectcards/projects.jsx";
+import { ClubCarousel } from "./assets/components/ClubCarousel/ClubCarousel.jsx";
 import { Footer } from "./assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "./assets/components/background/InteractiveBackground.jsx";
 import { ScrollToTopButton } from "./assets/components/ScrollToTop/ScrollToTopButton.jsx";
@@ -20,6 +22,13 @@ import { PosterPage } from "./pages/PosterPage.jsx";
 import { WingnutorooPage } from "./pages/WingnutorooPage.jsx";
 import { ContactPage } from "./pages/ContactPage.jsx";
 import "./App.css";
+
+function Landing() {
+    if (sessionStorage.getItem("landing-seen")) {
+        return <Navigate to="/home" replace />;
+    }
+    return <LandingSection />;
+}
 
 function Home() {
     return (
@@ -45,6 +54,10 @@ function Home() {
                 />
                 {/* PoPa & Design Jam — hidden for now; re-add ProjectCards + routes when ready */}
             </Projects>
+            <section className="home-designs">
+                <h2>Designs</h2>
+                <ClubCarousel />
+            </section>
             <Footer />
         </>
     );
@@ -55,7 +68,8 @@ function App() {
         <BrowserRouter>
             <>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/forge" element={<ForgePage />} />
                     <Route path="/moolahmate" element={<MoolahmatePage />} />
                     <Route path="/bandit-breakout" element={<BanditBreakoutPage />} />

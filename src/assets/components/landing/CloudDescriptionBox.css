@@ -1,0 +1,18 @@
+.scene-desc-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%);
+  width: min(900px, 95vw);
+  max-width: 1400px;
+  height: auto;
+  z-index: 7;
+  pointer-events: auto;
+  user-select: none;
+  overflow: visible;
+}
+
+/* Opacity on the image only — parent opacity would fade the Explore button too */
+.scene-desc-image {
+  opacity: 0.4;
+}

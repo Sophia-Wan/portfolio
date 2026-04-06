@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import "./Kaguya.css";
 import { ProjectShowcase } from "../assets/components/showcase/ProjectShowcase.jsx";
 import { Header } from "../assets/components/navbar/navbar.jsx";
@@ -6,16 +6,31 @@ import { Footer } from "../assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "../assets/components/background/InteractiveBackground.jsx";
 
 const Kaguya_Designs = ["/Can1.png", "/Can2.png", "/Can3.png"];
+const AUTO_PLAY_MS = 6000;
 
 export function KaguyaPage() {
     const [carouselIndex, setCarouselIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+    const timerRef = useRef(null);
 
-    const goPrev = () => {
+    const goPrev = useCallback(() => {
         setCarouselIndex((i) => (i === 0 ? Kaguya_Designs.length - 1 : i - 1));
-    };
-    const goNext = () => {
+    }, []);
+
+    const goNext = useCallback(() => {
         setCarouselIndex((i) => (i === Kaguya_Designs.length - 1 ? 0 : i + 1));
-    };
+    }, []);
+
+    useEffect(() => {
+        if (isHovered) return;
+        timerRef.current = setInterval(goNext, AUTO_PLAY_MS);
+        return () => clearInterval(timerRef.current);
+    }, [isHovered, goNext]);
+
+    const handleKeyDown = useCallback((e) => {
+        if (e.key === "ArrowLeft") goPrev();
+        else if (e.key === "ArrowRight") goNext();
+    }, [goPrev, goNext]);
 
     return (
         <>
@@ -83,40 +98,48 @@ export function KaguyaPage() {
                     </p>
                 </div>
 
-                <div className='kaguya-carousel'>
-                    <div className='kaguya-carousel-track'>
+                <div
+                    className='kaguya-carousel'
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    onKeyDown={handleKeyDown}
+                    tabIndex={0}
+                    role="region"
+                    aria-label="Kaguya can designs carousel"
+                >
+                    <div className='kaguya-carousel-viewport'>
+                        <div
+                            className='kaguya-carousel-track'
+                            style={{ transform: `translateX(-${carouselIndex * 100}%)` }}
+                        >
+                            {Kaguya_Designs.map((src, i) => (
+                                <div
+                                    key={i}
+                                    className='kaguya-carousel-slide'
+                                    aria-hidden={i !== carouselIndex}
+                                >
+                                    <img src={src} alt={`Kaguya can ${i + 1}`} />
+                                </div>
+                            ))}
+                        </div>
                         <button
                             type='button'
                             className='kaguya-carousel-prev'
                             onClick={goPrev}
-                            aria-label='Previous'>
+                            aria-label='Previous slide'
+                        >
                             <img src="/Arrows.svg" alt="" className="kaguya-carousel-arrow kaguya-carousel-arrow-prev" />
                         </button>
-                        {Kaguya_Designs.map((src, i) => (
-                            <div
-                                key={i}
-                                className={`kaguya-carousel-slide ${i === carouselIndex ? "active" : ""}`}
-                                aria-hidden={i !== carouselIndex}>
-                                {src ? (
-                                    <img
-                                        src={src}
-                                        alt={`Kaguya ${i + 1}`}
-                                    />
-                                ) : (
-                                    <span className='kaguya-carousel-placeholder'>
-                                        Add image {i + 1}
-                                    </span>
-                                )}
-                            </div>
-                        ))}
                         <button
                             type='button'
                             className='kaguya-carousel-next'
                             onClick={goNext}
-                            aria-label='Next'>
+                            aria-label='Next slide'
+                        >
                             <img src="/Arrows.svg" alt="" className="kaguya-carousel-arrow kaguya-carousel-arrow-next" />
                         </button>
                     </div>
+
                     <div className='kaguya-carousel-dots'>
                         {Kaguya_Designs.map((_, i) => (
                             <button
@@ -128,6 +151,10 @@ export function KaguyaPage() {
                             />
                         ))}
                     </div>
+
+                    <p className='kaguya-carousel-counter'>
+                        {carouselIndex + 1} / {Kaguya_Designs.length}
+                    </p>
                 </div>
 
                 <section className="kaguya-models" aria-label="3D can models">
