@@ -7,6 +7,7 @@ import {
     ProjectCard,
 } from "./assets/components/projectcards/projects.jsx";
 import { ClubCarousel } from "./assets/components/ClubCarousel/ClubCarousel.jsx";
+import { About } from "./assets/components/about/About.jsx";
 import { Footer } from "./assets/components/footer/footer.jsx";
 import { InteractiveBackground } from "./assets/components/background/InteractiveBackground.jsx";
 import { ScrollToTopButton } from "./assets/components/ScrollToTop/ScrollToTopButton.jsx";
@@ -36,21 +37,29 @@ function Home() {
             <InteractiveBackground />
             <Header />
             <Hero />
+            <About />
             <Projects>
                 <ProjectCard
                     title='Forge'
                     year='2023'
                     image='/Forge.svg'
+                    description='An app aimed to help high school students discover trade careers through interactive career simulations.'
                 />
                 <ProjectCard
                     title='Bandit Breakout'
                     year='2024'
                     image='/Bandit_breakout.svg?v=2'
+                    description='A mini game built around quick reflexes and mischief.'
+                       video='/BB_Video.mp4'
+                       videoPoster='/BanditBreakout.svg'
+                    
                 />
                 <ProjectCard
                     title='Moolahmate'
                     year='2024'
                     image='/Moolahmate.svg'
+                    description='A friendly money-tracker app guided by MooMoo the cow.'
+                    accent='moolahmate'
                 />
                 {/* PoPa & Design Jam — hidden for now; re-add ProjectCards + routes when ready */}
             </Projects>

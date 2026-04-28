@@ -50,7 +50,7 @@
 
 .design-club-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
@@ -61,22 +61,87 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 260px;
+    aspect-ratio: 520 / 730;
+    text-decoration: none;
+    color: inherit;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.design-club-card--linked {
+    cursor: pointer;
+}
+
+/* Image-only cards: no footer space, image fills the whole card */
+.design-club-card--image-only {
+    background: transparent;
+    box-shadow: none;
+}
+
+.design-club-card--image-only .design-club-image-wrap {
+    background: transparent;
+}
+
+.design-club-card--linked:hover,
+.design-club-card--linked:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(61, 32, 64, 0.22);
+    outline: none;
+}
+
+.design-club-image-placeholder {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    color: rgba(61, 32, 64, 0.55);
+    text-align: center;
 }
 
 .design-club-image-wrap {
-    padding: 1.5rem;
+    flex: 1;
+    background: #8a7c8d;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
 }
 
 .design-club-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    display: block;
+}
+
+.design-club-footer {
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+}
+
+.design-club-button {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    font-family: var(--font-primary-bold);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 0.7rem 2.2rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(61, 32, 64, 0.15);
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.design-club-card--linked:hover .design-club-button,
+.design-club-card--linked:focus-visible .design-club-button {
+    background: var(--color-primary);
+    transform: scale(1.04);
+    box-shadow: 0 6px 18px rgba(61, 32, 64, 0.25);
 }
 
 @media (max-width: 900px) {

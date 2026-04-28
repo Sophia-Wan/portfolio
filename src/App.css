@@ -36,12 +36,7 @@
 /* Designs section on home page */
 .home-designs {
   padding: 80px 40px;
-  background: linear-gradient(
-    to bottom,
-    rgba(234, 207, 223, 0.7) 0%,
-    rgba(108, 63, 114, 0.7) 50%,
-    rgba(61, 32, 64, 0.7) 100%
-  );
+  background: transparent;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -50,9 +45,10 @@
 .home-designs h2 {
   font-size: 36px;
   font-weight: 700;
-  color: var(--color-text-dark);
+  color: var(--color-white);
   margin: 0 0 50px 0;
   font-family: var(--font-primary);
+  text-align: center;
 }
 
 .home-designs-grid {

@@ -19,8 +19,8 @@ export function Header() {
           >
             Designs
           </NavLink>
-          <a href="/#projects" className="nav-link">
-            Projects
+          <a href="/home#about" className="nav-link">
+            About
           </a>
           <NavLink
             to="/contact"
